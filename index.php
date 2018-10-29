@@ -39,7 +39,7 @@
 <html>
 <head>
 	<title>Sticky Notes</title>
-	<h3><a href="register.html">Register Now</a></h3> | <h3><a href="login.html">Login</a></h3>
+	<p><a href="register.html">Register Now</a></h3> | <h3><a href="login.html">Login</a></p>
 	
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
