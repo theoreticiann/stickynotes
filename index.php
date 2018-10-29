@@ -1,14 +1,15 @@
 <?php 
-    // initialize errors variable
-	$errors = "";
-
 	$dbServername = "107.170.203.30";
 	$dbUsername = "qafmzsuxhq";
 	$dbPassword = "SamaJZe6Nf";
-	$dbName = "note";
+	$dbName = "qafmzsuxhq";
 
 	// connect to database
 	$db = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
+    	// initialize errors variable
+	$errors = "";
+
 
 	// insert a quote if submit button is clicked
 	if (isset($_POST['submit'])) {
