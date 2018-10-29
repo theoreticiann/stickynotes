@@ -44,7 +44,7 @@
 <body>
 	<div class="heading">
 		<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
-		<p><a href="register.html">Register Now</a></p> | <p><a href="login.html">Login</a></p>
+		<p><a href="register.html">Register Now</a> | <a href="login.html">Login</a></p>
 
 	</div>
 	<form method="post" action="index.php" class="input_form">
