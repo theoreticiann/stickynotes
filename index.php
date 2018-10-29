@@ -38,14 +38,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sticky Notes</title>
-	<p><a href="register.html">Register Now</a></h3> | <h3><a href="login.html">Login</a></p>
-	
+	<title>Sticky Notes</title>	
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div class="heading">
 		<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
+		<p><a href="register.html">Register Now</a></p> | <p><a href="login.html">Login</a></p>
+
 	</div>
 	<form method="post" action="index.php" class="input_form">
 		<input type="text" name="note" class="task_input">
