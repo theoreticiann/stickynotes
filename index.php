@@ -57,18 +57,20 @@
 	<div>
   	<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>
-      <div class="error success" >
-      	<h3>
+      <center>
+      	<p>
           <?php 
           	echo $_SESSION['success']; 
           	unset($_SESSION['success']);
           ?>
-      	</h3>
-      </div>
+      	</p>
+      </center>
   	<?php endif ?>
+
+  	<br />
+  	<br />
 	<?php  if (isset($_SESSION['username'])) : ?>
-    	<p align="center">Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-    	<p align="center"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+    	<H2 align="center">Welcome <strong><?php echo $_SESSION['username']; ?></strong></H2>
     <?php endif ?>
 	
 	<form method="post" action="index.php" class="form">
