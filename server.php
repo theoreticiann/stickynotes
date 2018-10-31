@@ -46,7 +46,7 @@ if (isset($_POST['reg_user'])) {
 
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
-  	$password = md5($password_1);//encrypt the password before saving in the database
+  	$hash = md5($password_1);//encrypt the password before saving in the database
 
   	$query = "INSERT INTO admin (username,password,email) 
   			  VALUES('$username','$hash','$email')";
@@ -71,7 +71,7 @@ if (isset($_POST['login_user'])) {
   }
 
   if (count($errors) == 0) {
-  	$password = md5($password);
+  	$password = md5($hash);
   	$query = "SELECT * FROM admin WHERE username='$username' AND password='$hash'";
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
