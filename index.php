@@ -71,6 +71,8 @@
   	<br />
 	<?php  if (isset($_SESSION['username'])) : ?>
     	<H2 align="center">Welcome <strong><?php echo $_SESSION['username']; ?></strong></H2>
+	<p align="center"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+
     <?php endif ?>
 	<br />
 	<form method="post" action="index.php" align="center" class="form">
