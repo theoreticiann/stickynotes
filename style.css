@@ -30,9 +30,10 @@ form {
 
 .task_input {
   width: 75%;
-  height: 40px; 
+  height: 30px; 
   padding: 10px;
-  border: 2px solid #6B8E23;
+  background: #FFF8DC;
+  border: 1px solid #ccc;
 }
 .add_btn {
   height: 42px;
