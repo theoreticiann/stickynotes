@@ -24,7 +24,9 @@ if (isset($_POST['reg_user'])) {
   if (empty($password_1)) { array_push($errors, "Password is required"); }
   if ($password_1 != $password_2) {
 	array_push($errors, "The two passwords do not match");
-	  }
+	  } else {
+	  $hash = password_hash($password, PASSWORD_DEFAULT);
+  }
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
@@ -47,7 +49,7 @@ if (isset($_POST['reg_user'])) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
   	$query = "INSERT INTO admin (username,password,email) 
-  			  VALUES('$username','$password','$email')";
+  			  VALUES('$username','$hash','$email')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
