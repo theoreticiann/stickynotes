@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-  width: 30%;
+  width: 50%;
   margin: 50px auto 0px;
   color: white;
   background: #5F9EA0;
@@ -18,14 +18,47 @@ body {
   border-radius: 10px 10px 0px 0px;
   padding: 20px;
 }
-form, .content {
-  width: 30%;
-  margin: 0px auto;
-  padding: 20px;
-  border: 1px solid #B0C4DE;
-  background: white;
-  border-radius: 0px 0px 10px 10px;
+
+form {
+  width: 50%; 
+  margin: 30px auto; 
+  border-radius: 5px; 
+  padding: 10px;
+  background: #FFF;
+  border: 1px solid #6B8E23;
 }
+
+.task_input {
+  width: 75%;
+  height: 40px; 
+  padding: 10px;
+  border: 2px solid #6B8E23;
+}
+.add_btn {
+  height: 42px;
+  background: #FFF8DC;
+  color:  #6B8E23;
+  border: 2px solid #6B8E23;
+  border-radius: 5px; 
+  padding: 5px 20px;
+}
+
+
+.task {
+  text-align: center;
+}
+
+.delete{
+  text-align: center;
+}
+.delete a{
+  color: white;
+  background: #a52a2a;
+  padding: 1px 6px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
 .input-group {
   margin: 10px 0px 10px 0px;
 }
@@ -45,19 +78,11 @@ form, .content {
 .btn {
   padding: 10px;
   font-size: 15px;
-  color: white;
+  color: whote;
   background: #5F9EA0;
   border: none;
   border-radius: 5px;
 }
-
-.task_input {
-  width: 75%;
-  height: 40px; 
-  padding: 10px;
-  border: 2px solid #6B8E23;
-}
-  
 .error {
   width: 92%; 
   margin: 0px auto; 
