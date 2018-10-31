@@ -72,8 +72,8 @@
 	<?php  if (isset($_SESSION['username'])) : ?>
     	<H2 align="center">Welcome <strong><?php echo $_SESSION['username']; ?></strong></H2>
     <?php endif ?>
-	
-	<form method="post" action="index.php" class="form">
+	<br />
+	<form method="post" action="index.php" align="center" class="form">
 		<input type="text" name="note" class="task_input">
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Note</button>
 		<?php if (isset($errors)) { ?>
@@ -81,7 +81,7 @@
 		<?php } ?>
 	</form>
 	
-	<table>
+	<table align="center">
 	<thead>
 		<tr>
 			<th>Id</th>
