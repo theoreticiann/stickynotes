@@ -50,7 +50,7 @@
 </head>
 <body>
 	
-	<div class="heading">
+	<div class="header">
 		<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
 	</div>
 	
@@ -71,7 +71,7 @@
     	<p align="center"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 	
-	<form method="post" action="index.php" class="input_form">
+	<form method="post" action="index.php" class="form">
 		<input type="text" name="note" class="task_input">
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Note</button>
 		<?php if (isset($errors)) { ?>
