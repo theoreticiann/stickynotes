@@ -83,7 +83,20 @@
 	
 	<div class="header">
 		<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
-		<p align="left"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+		<p align="right"> <a href="index.php?logout='1'" style="color: white;">logout</a> </p>
+		<div aligh="left"><?php echo date("jS F, Y",$currentTime); ?></div>  
+		<div align ="right">
+			<div class="weather-forecast">
+            <center><img
+                src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
+                class="weather-icon" /><center>
+		    <br />
+		    <div><?php echo ucwords($data->weather[0]->description); ?></div>
+		    <?php echo $data->main->temp_max; ?>°C <span
+                class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
+        </div>
+	</div>
+		
 	</div>
 	
 	<br />
@@ -110,17 +123,16 @@
 	<br />
 
 	<div align="center">
-        <b><?php echo $data->name; ?> Weather Status</b>
-        <div class="time">
-            <div><?php echo date("l g:i a", $currentTime); ?></div>
-            <div><?php echo date("jS F, Y",$currentTime); ?></div>        </div>
+		<div class="time">
+			<div><?php echo date("l g:i a", $currentTime); ?></div>
+          </div>
         <div class="weather-forecast">
             <center><img
                 src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
                 class="weather-icon" /><center>
 		    <br />
 		    <div><?php echo ucwords($data->weather[0]->description); ?></div>
-		    <?php echo $data->main->temp_max; ?>°C<span
+		    <?php echo $data->main->temp_max; ?>°C <span
                 class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
         </div>
 	</div>
