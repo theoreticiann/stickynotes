@@ -53,7 +53,7 @@
 
 <?php
 	$apiKey = "ade039452c8d195dee785fc32ad2cd54";
-	$cityId = "5393068";
+	$cityId = "1270260";
 	$googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=metric&APPID=" . $apiKey;
 
 	$ch = curl_init();
