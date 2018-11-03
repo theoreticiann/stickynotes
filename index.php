@@ -109,17 +109,15 @@
     <?php endif ?>
 
 	<div align="center">
-        <h2><?php echo $data->name; ?> Weather Status</h2>
+        <b><?php echo $data->name; ?> Weather Status</b>
         <div class="time">
             <div><?php echo date("l g:i a", $currentTime); ?></div>
-            <div><?php echo date("jS F, Y",$currentTime); ?></div>
-            <div><?php echo ucwords($data->weather[0]->description); ?></div>
-        </div>
+            <div><?php echo date("jS F, Y",$currentTime); ?></div>        </div>
         <div class="weather-forecast">
-            <img
+            <center><img
                 src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
                 class="weather-icon" /> <?php echo $data->main->temp_max; ?>°C<span
-                class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
+                class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span><center>
         </div>
 	</div>
 
