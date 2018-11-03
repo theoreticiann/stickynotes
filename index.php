@@ -84,37 +84,8 @@
 	<div class="header">
 		<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
 	</div>
-
-		<div class="report-container">
-        <h2><?php echo $data->name; ?> Weather Status</h2>
-        <div class="time">
-            <div><?php echo date("l g:i a", $currentTime); ?></div>
-            <div><?php echo date("jS F, Y",$currentTime); ?></div>
-            <div><?php echo ucwords($data->weather[0]->description); ?></div>
-        </div>
-        <div class="weather-forecast">
-            <img
-                src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
-                class="weather-icon" /> <?php echo $data->main->temp_max; ?>°C<span
-                class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
-        </div>
-	</div>
 	
-	<div>
-  	<!-- notification message -->
-  	<?php if (isset($_SESSION['success'])) : ?>
-      <center>
-      	<p>
-          <?php 
-          	echo $_SESSION['success']; 
-          	unset($_SESSION['success']);
-          ?>
-      	</p>
-      </center>
-  	<?php endif ?>
-
-  	<br />
-  	<br />
+	<br />
 	<?php  if (isset($_SESSION['username'])) : ?>
     	<p align="center">Hey <strong><?php echo $_SESSION['username']; ?>,
     	<?php
@@ -136,6 +107,23 @@
 	<p align="center"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
 
     <?php endif ?>
+
+	<div align="center">
+        <h2><?php echo $data->name; ?> Weather Status</h2>
+        <div class="time">
+            <div><?php echo date("l g:i a", $currentTime); ?></div>
+            <div><?php echo date("jS F, Y",$currentTime); ?></div>
+            <div><?php echo ucwords($data->weather[0]->description); ?></div>
+        </div>
+        <div class="weather-forecast">
+            <img
+                src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
+                class="weather-icon" /> <?php echo $data->main->temp_max; ?>°C<span
+                class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
+        </div>
+	</div>
+
+  	
 	<br />
 	
 	<form method="post" action="index.php" class="input_form">
