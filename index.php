@@ -112,11 +112,9 @@
                 class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
         </div>
 	</div>
-
   	
 	<br />
-	
-	<form method="post" action="index.php" class="input_form">
+	<form method="post" action="index.php" align="center" class="form">
 		<input type="text" name="note" class="task_input">
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Note</button>
 		<?php if (isset($errors)) { ?>
@@ -124,7 +122,7 @@
 		<?php } ?>
 	</form>
 	
-	<table>
+	<table align="center">
 	<thead>
 		<tr>
 			<th>Id</th>
@@ -150,32 +148,6 @@
 		<?php  } ?>	
 	</tbody>
 </table>
-</table>
-</form>
-<h4>Completed</h4>
-	<table>
-	<thead>
-		<tr>
-			<th>Note</th>
-			<th style="width: 60px;">Delete</th>
-		</tr>
-	</thead>
-
-	<tbody>
-		<?php 
-		// select all tasks if page is visited or refreshed
-		$username = $_SESSION['username'];
 	
-		$notes = mysqli_query($db, "SELECT * FROM sticky_notes where username = '$username' and completed='true'");
-		 while ($row = mysqli_fetch_array($notes)) { ?>
-			<tr>
-				<td class="task"> <?php echo $row['content']; ?> </td>
-				<td class="delete"> 
-					<a href="index.php?del_task=<?php echo $row['id'] ?>">x</a> 
-				</td>
-			</tr>
-		<?php  } ?>	
-	</tbody>
-</table>
 </body>
 </html>
