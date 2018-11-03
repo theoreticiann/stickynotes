@@ -83,11 +83,12 @@
 	
 	<div class="header">
 		<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
+		<p align="left"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
 	</div>
 	
 	<br />
 	<?php  if (isset($_SESSION['username'])) : ?>
-    	<p align="center">Hey <strong><?php echo $_SESSION['username']; ?>,
+    	<H2 align="center">Hey <strong><?php echo $_SESSION['username']; ?>,
     	<?php
   	$hour = date('H', time());
 
@@ -103,10 +104,10 @@
 	else {
   	echo "Not slept yet!  Are you programming?";
 	}
-	?></strong></p>
-	<p align="center"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+	?></strong></H2>
 
     <?php endif ?>
+	<br />
 
 	<div align="center">
         <b><?php echo $data->name; ?> Weather Status</b>
@@ -116,7 +117,10 @@
         <div class="weather-forecast">
             <center><img
                 src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
-                class="weather-icon" /> <center> <br /><?php echo $data->main->temp_max; ?>°C<span
+                class="weather-icon" /><center>
+		    <br />
+		    <div><?php echo ucwords($data->weather[0]->description); ?></div>
+		    <?php echo $data->main->temp_max; ?>°C<span
                 class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
         </div>
 	</div>
