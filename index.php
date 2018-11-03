@@ -20,35 +20,23 @@
 		}else{
 			$note = $_POST['note'];
 			$username = $_SESSION['username'];
-			$sql = "INSERT INTO sticky_notes (content,username,completed) VALUES ('$note','$username','false')";
+			$sql = "INSERT INTO sticky_notes (content,username) VALUES ('$note','$username')";
 			mysqli_query($db, $sql);
 			header('location: index.php');
 		}
 	}
-	
-	if (isset($_GET['done'])) {
-			// if (isset($_GET['done_task'])) {
-			// $id = $_GET['done_task'];
-			// }
-			if (isset($_GET['complete'])) {
-				
-			$complete = $_GET['complete'];
-			}
-			
-			$sql = "UPDATE sticky_notes SET completed = 'true' WHERE id=".$complete;
-			mysqli_query($db, $sql);
-			header('location: index.php');
-		}
-	
 	
 		if (isset($_GET['del_task'])) {
 		$id = $_GET['del_task'];
+
 		mysqli_query($db, "DELETE FROM sticky_notes WHERE id=".$id);
 		header('location: index.php');
 	}
+
 	// select all tasks if page is visited or refreshed
 	$tasks = mysqli_query($db, "SELECT * FROM sticky_notes");
-	?>
+
+?>
 
 
 <?php
@@ -137,11 +125,9 @@
 	</form>
 	
 	<table>
-	<form method="get" action="index.php" class="input_form">
-	<button type="submit" name="done" id="done" class="done" style="display:none">Done</button>
 	<thead>
 		<tr>
-			<th>Completed</th>
+			<th>Id</th>
 			<th>Note</th>
 			<th style="width: 60px;">Delete</th>
 		</tr>
@@ -151,18 +137,19 @@
 		<?php 
 		// select all tasks if page is visited or refreshed
 		$username = $_SESSION['username'];
-		$notes = mysqli_query($db, "SELECT * FROM sticky_notes where username = '$username' and completed='false'");
+		$notes = mysqli_query($db, "SELECT * FROM sticky_notes where username = '$username'");
+
 		 while ($row = mysqli_fetch_array($notes)) { ?>
 			<tr>
-				<td class="task"> <input type="checkbox" name="complete" id="<?php echo $row['id'] ?>" value="<?php echo $row['id'] ?>" onclick="show_button()"></td> 
+				<td class="task"> <?php echo $row['id'] ;?></td> 
 				<td class="task"> <?php echo $row['content']; ?> </td>
 				<td class="delete"> 
 					<a href="index.php?del_task=<?php echo $row['id'] ?>">x</a> 
 				</td>
-				
 			</tr>
 		<?php  } ?>	
 	</tbody>
+</table>
 </table>
 </form>
 <h4>Completed</h4>
