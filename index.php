@@ -71,6 +71,21 @@
 	
 	<div class="header">
 	<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
+	<div align="left">
+		<div class="time">
+			<div><?php echo date("l g:i a", $currentTime); ?></div>
+          </div>
+        <div class="weather-forecast">
+            <center><img
+                src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
+                class="weather-icon" /><center>
+		    <br />
+		    <div><?php echo ucwords($data->weather[0]->description); ?></div>
+		    <?php echo $data->main->temp_max; ?>°C <span
+                class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
+        </div>
+	</div>
+
 	<?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
       	<h3>
@@ -87,7 +102,7 @@
 	
 	<br />
 	<?php  if (isset($_SESSION['username'])) : ?>
-    	<b align="center">Hey <strong><?php echo $_SESSION['username']; ?>,
+    	<H4 align="center">Hey <strong><?php echo $_SESSION['username']; ?>,
     	<?php
   	$hour = date('H', time());
 
@@ -103,25 +118,8 @@
 	else {
   	echo "Not slept yet!  Are you programming?";
 	}
-	?></strong></b>
+	?></strong></H4>
     <?php endif ?>
-	<br />
-
-	<div align="center">
-		<div class="time">
-			<div><?php echo date("l g:i a", $currentTime); ?></div>
-          </div>
-        <div class="weather-forecast">
-            <center><img
-                src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
-                class="weather-icon" /><center>
-		    <br />
-		    <div><?php echo ucwords($data->weather[0]->description); ?></div>
-		    <?php echo $data->main->temp_max; ?>°C <span
-                class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
-        </div>
-	</div>
-  	
 	<br />
 	<form method="post" action="index.php" align="center" class="form">
 		<input type="text" name="note" class="task_input">
