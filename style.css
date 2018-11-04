@@ -26,11 +26,11 @@ form {
   border-radius: 5px; 
   padding: 10px;
   background: #FFF;
-  box-shadow: 1px #ccc;
+  box-shadow: 1px 1px 1px #ccc;
 }
 
 .task_input {
-  width: 80%;
+  width: 70%;
   height: 25px; 
   padding: 10px;
   background: #FFF8DC;
