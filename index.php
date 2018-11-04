@@ -73,12 +73,10 @@
 	<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
 	<div align="left">
 		<div class="time">
-			<div><?php echo date("l g:i a", $currentTime); ?></div>
-          </div>
         <div class="weather-forecast">
             <center><img
                 src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
-                class="weather-icon" /><center>
+                class="weather-icon" /><center></div>
 		    <br />
 		    <div><?php echo ucwords($data->weather[0]->description); ?></div>
 		    <?php echo $data->main->temp_max; ?>°C <span
