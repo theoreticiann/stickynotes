@@ -39,7 +39,8 @@ form {
 
 .add_btn {
   height: 35px;
-  background: #FFF; 
+  background: #FFF;
+  border-radius: 1px; 
   padding: 10px;
   box-shadow: 1px 1px 1px 1px;
 }
