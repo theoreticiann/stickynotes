@@ -149,8 +149,9 @@
 		$notes = mysqli_query($db, "SELECT * FROM sticky_notes where username = '$username'");
 
 		 while ($row = mysqli_fetch_array($notes)) { ?>
-			<tr>				<td class="task"> <?php echo $row['content']; ?> </td>
-				<td class="delete"> 
+			<tr>				
+				<td align="left"> <?php echo $row['content']; ?> </td>
+				<td align="right" ="delete"> 
 					<a href="index.php?del_task=<?php echo $row['id'] ?>">x</a> 
 				</td>
 			</tr>
