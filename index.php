@@ -79,21 +79,10 @@
 		    <?php echo $data->main->temp_max; ?>°C <span
                 class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
         </div>
-	</div>
-
-	<?php if (isset($_SESSION['success'])) : ?>
-      <div class="error success" >
-      	<h3>
-          <?php 
-          	echo $_SESSION['success']; 
-          	unset($_SESSION['success']);
-          ?>
-      	</h3>
-      </div>
-  	<?php endif ?>
   	<div>
 		<p align="right"> <a href="index.php?logout='1'" style="color: white;">logout</a> </p>
 		<div aligh="left"><?php echo date("jS F, Y",$currentTime); ?></div>  
+	</div>
 	</div>
 	
 	<br />
