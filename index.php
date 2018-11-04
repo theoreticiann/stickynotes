@@ -87,7 +87,7 @@
 	
 	<br />
 	<?php  if (isset($_SESSION['username'])) : ?>
-    	<b> align="center">Hey <strong><?php echo $_SESSION['username']; ?>,
+    	<b align="center">Hey <strong><?php echo $_SESSION['username']; ?>,
     	<?php
   	$hour = date('H', time());
 
