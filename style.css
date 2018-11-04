@@ -31,19 +31,18 @@ form {
 
 .task_input {
   width: 70%;
-  height: 25px; 
+  height: 45px; 
   border: 1px solid;
   padding: 2px;
-  box-shadow: 2px 2px;
+  box-shadow: 1px 1px;
 }
 
 .add_btn {
-  height: 42px;
+  height: 45px;
   background: #FFF;
-  color:  #6B8E23;
   border-radius: 5px; 
   padding: 10px;
-  box-shadow: 2px 2px 2px 2px;
+  box-shadow: 1px 1px 1px 1px;
 }
 
 table {
