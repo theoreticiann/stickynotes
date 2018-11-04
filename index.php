@@ -132,8 +132,8 @@
 		<?php } ?>
 	</form>
 	
-	<table class="form">
-	<thead>
+	<table>
+	<thead class="form">
 		<tr>
 			<th>Note</th>
 			<th style="width: 60px;">Delete</th>
