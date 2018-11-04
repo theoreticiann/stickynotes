@@ -72,12 +72,9 @@
 	<div class="header">
 	<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
 	<div align="left">
-		<div class="time">
         <div class="weather-forecast">
-            <center><img
-                src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
-                class="weather-icon" /><center></div>
-		    <br />
+         <img src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
+                class="weather-icon" /></div>
 		    <div><?php echo ucwords($data->weather[0]->description); ?></div>
 		    <?php echo $data->main->temp_max; ?>°C <span
                 class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
