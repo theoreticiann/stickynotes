@@ -69,9 +69,13 @@
 </head>
 <body>
 	
-	<div class="header">
-	<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
-	<?php if (isset($_SESSION['success'])) : ?>
+	<div class="heading">
+		<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
+	</div>
+	
+	<div>
+  	<!-- notification message -->
+  	<?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
       	<h3>
           <?php 
@@ -81,50 +85,12 @@
       	</h3>
       </div>
   	<?php endif ?>
-		<p align="right"> <a href="index.php?logout='1'" style="color: white;">logout</a> </p>
-		<div aligh="left"><?php echo date("jS F, Y",$currentTime); ?></div>  
-	</div>
-	
-	<br />
 	<?php  if (isset($_SESSION['username'])) : ?>
-    	<H2 align="center">Hey <strong><?php echo $_SESSION['username']; ?>,
-    	<?php
-  	$hour = date('H', time());
-
-	if( $hour > 6 && $hour <= 11) {
-  	echo "Good Morning!";
-	}
-	else if($hour > 11 && $hour <= 16) {
-  	echo "Good Afternoon!";
-	}
-	else if($hour > 16 && $hour <= 23) {
-  	echo "Good Evening!";
-	}
-	else {
-  	echo "Not slept yet!  Are you programming?";
-	}
-	?></strong></H2>
-
+    	<p align="center">Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    	<p align="center"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
-	<br />
-
-	<div align="center">
-		<div class="time">
-			<div><?php echo date("l g:i a", $currentTime); ?></div>
-          </div>
-        <div class="weather-forecast">
-            <center><img
-                src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
-                class="weather-icon" /><center>
-		    <br />
-		    <div><?php echo ucwords($data->weather[0]->description); ?></div>
-		    <?php echo $data->main->temp_max; ?>°C <span
-                class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
-        </div>
-	</div>
-  	
-	<br />
-	<form method="post" action="index.php" align="center" class="form">
+	
+	<form method="post" action="index.php" class="input_form">
 		<input type="text" name="note" class="task_input">
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Note</button>
 		<?php if (isset($errors)) { ?>
@@ -132,7 +98,7 @@
 		<?php } ?>
 	</form>
 	
-	<table align="center">
+	<table>
 	<thead>
 		<tr>
 			<th>Id</th>
