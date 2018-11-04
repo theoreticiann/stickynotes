@@ -33,16 +33,17 @@ form {
   width: 70%;
   height: 25px; 
   padding: 10px;
-  background: #FFF8DC;
-  border: 1px solid #ccc;
+  background: #FFF;
+  box-shadow: 1px 1px 1px 1px #ccc;
 }
 .add_btn {
   height: 42px;
   background: #FFF8DC;
   color:  #6B8E23;
-  border: 2px solid #6B8E23;
+  border: 2px solid #FFF;
   border-radius: 5px; 
   padding: 5px 20px;
+  box-shadow: 1px 1px 1px 1px #ccc;
 }
 
 table {
