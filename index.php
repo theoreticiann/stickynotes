@@ -70,12 +70,17 @@
 <body>
 	
 	<div class="header">
-		<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
-		<?php if (isset($_SESSION['success'])) : ?>
-		<center><p><?php echo $_SESSION['success']; 
-		unset($_SESSION['success']); 
-		?>
-      	</p></center>
+	<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
+	<?php if (isset($_SESSION['success'])) : ?>
+      <div class="error success" >
+      	<h3>
+          <?php 
+          	echo $_SESSION['success']; 
+          	unset($_SESSION['success']);
+          ?>
+      	</h3>
+      </div>
+  	<?php endif ?>
 		<p align="right"> <a href="index.php?logout='1'" style="color: white;">logout</a> </p>
 		<div aligh="left"><?php echo date("jS F, Y",$currentTime); ?></div>  
 	</div>
