@@ -127,19 +127,21 @@
 	<form method="post" action="index.php" align="center" class="form">
 		<input type="text" name="note" class="task_input">
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Note</button>
+
+		<br />
+
+
 		<?php if (isset($errors)) { ?>
 		<p><?php echo $errors; ?></p>
 		<?php } ?>
-	</form>
 	
 	<table>
-	<thead class="form">
+	<thead>
 		<tr>
 			<th>Note</th>
 			<th style="width: 60px;">Delete</th>
 		</tr>
 	</thead>
-
 	<tbody>
 		<?php 
 		// select all tasks if page is visited or refreshed
@@ -154,6 +156,7 @@
 			</tr>
 		<?php  } ?>	
 	</tbody>
+</form>
 </table>
 	
 </body>
