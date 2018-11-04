@@ -91,6 +91,7 @@
       	</h3>
       </div>
   	<?php endif ?>
+  	<div>
 		<p align="right"> <a href="index.php?logout='1'" style="color: white;">logout</a> </p>
 		<div aligh="left"><?php echo date("jS F, Y",$currentTime); ?></div>  
 	</div>
