@@ -132,7 +132,7 @@
 		<?php } ?>
 	</form>
 	
-	<table align="center">
+	<table class="form">
 	<thead>
 		<tr>
 			<th>Note</th>
