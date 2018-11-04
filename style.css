@@ -4,7 +4,7 @@
 }
 body {
   font-size: 120%;
-  background: #F8F8FF;
+  background: #FFF;
 }
 
 .header {
@@ -29,7 +29,7 @@ form {
 }
 
 .task_input {
-  width: 60%;
+  width: 65%;
   height: 25px; 
   padding: 10px;
   background: #FFF8DC;

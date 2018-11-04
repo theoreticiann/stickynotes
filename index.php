@@ -135,7 +135,7 @@
 		<p><?php echo $errors; ?></p>
 		<?php } ?>
 	
-	<table>
+	<table class="table">
 	<thead>
 		<tr>
 			<th align="left">Note</th>
