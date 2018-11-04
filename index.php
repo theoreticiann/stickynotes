@@ -57,7 +57,7 @@
 	curl_close($ch);
 	$data = json_decode($response);
 	$currentTime = time();
-	?>
+?>
 
 
 
@@ -71,6 +71,9 @@
 	
 	<div class="header">
 		<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
+		<?php if (isset($_SESSION['success'])) : ?>
+		<center><p><?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
+      	</p></center>
 		<p align="right"> <a href="index.php?logout='1'" style="color: white;">logout</a> </p>
 		<div aligh="left"><?php echo date("jS F, Y",$currentTime); ?></div>  
 	</div>
