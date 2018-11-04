@@ -138,7 +138,7 @@
 	<table>
 	<thead>
 		<tr>
-			<th>Note</th>
+			<th align="left">Note</th>
 			<th style="width: 60px;">Delete</th>
 		</tr>
 	</thead>
@@ -151,7 +151,7 @@
 		 while ($row = mysqli_fetch_array($notes)) { ?>
 			<tr>				
 				<td align="left"> <?php echo $row['content']; ?> </td>
-				<td align="right" ="delete"> 
+				<td align="right" class="delete" ="delete"> 
 					<a href="index.php?del_task=<?php echo $row['id'] ?>">x</a> 
 				</td>
 			</tr>
