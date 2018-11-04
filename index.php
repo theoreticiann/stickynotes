@@ -81,7 +81,6 @@
         </div>
   	<div>
 		<p align="right"> <a href="index.php?logout='1'" style="color: white;">logout</a> </p>
-		<div aligh="left"><?php echo date("jS F, Y",$currentTime); ?></div>  
 	</div>
 	</div>
 	
@@ -105,6 +104,8 @@
 	}
 	?></strong></H4>
     <?php endif ?>
+    		<div aligh="left"><?php echo date("jS F, Y",$currentTime); ?></div>  
+
 	<br />
 	<form method="post" action="index.php" align="center" class="form">
 		<input type="text" name="note" class="task_input">
