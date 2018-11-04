@@ -104,7 +104,7 @@
 	}
 	?></strong></H4>
     <?php endif ?>
-    		<div aligh="center"><?php echo date("jS F, Y",$currentTime); ?></div>  
+    <div align="center"><?php echo date("jS F, Y",$currentTime); ?></div>  
 
 	<br />
 	<form method="post" action="index.php" align="center" class="form">
