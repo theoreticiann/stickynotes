@@ -7,7 +7,7 @@
 </head>
 <body>
   <div class="header">
-  	<h2>Register</h2>
+  	<h2>Sticky Notes — Register</h2>
   </div>
 	
   <form method="post" action="register.php">
