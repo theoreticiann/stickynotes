@@ -4,7 +4,7 @@
 }
 body {
   font-size: 120%;
-  font-family: calibri;
+  font-family: Arial, Helvetica, sans-serif;  
   background: #FFF;
 }
 
@@ -30,15 +30,15 @@ form {
 }
 
 .task_input {
-  width: 70%;
-  height: 45px; 
+  width: 75%;
+  height: 35px; 
   border: 1px solid;
   padding: 2px;
   box-shadow: 1px 1px;
 }
 
 .add_btn {
-  height: 45px;
+  height: 35px;
   background: #FFF;
   border-radius: 5px; 
   padding: 10px;

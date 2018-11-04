@@ -87,7 +87,7 @@
 	
 	<br />
 	<?php  if (isset($_SESSION['username'])) : ?>
-    	<H2 align="center">Hey <strong><?php echo $_SESSION['username']; ?>,
+    	<b> align="center">Hey <strong><?php echo $_SESSION['username']; ?>,
     	<?php
   	$hour = date('H', time());
 
@@ -103,8 +103,7 @@
 	else {
   	echo "Not slept yet!  Are you programming?";
 	}
-	?></strong></H2>
-
+	?></strong></b>
     <?php endif ?>
 	<br />
 
