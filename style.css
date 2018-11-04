@@ -26,11 +26,11 @@ form {
   border-radius: 5px; 
   padding: 10px;
   background: #FFF;
-  border: 1px solid #6B8E23;
+  box-shadow: 1px #ccc;
 }
 
 .task_input {
-  width: 65%;
+  width: 80%;
   height: 25px; 
   padding: 10px;
   background: #FFF8DC;
@@ -46,7 +46,7 @@ form {
 }
 
 table {
-    width: 65%;
+    width: 90%;
     margin: 30px auto;
     border-collapse: collapse;
 }
