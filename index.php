@@ -12,7 +12,7 @@
   	header("location: login.php");
   }
 	// connect to database
-	$db = mysqli_connect("localhost", "", "", "");
+	$db = mysqli_connect("107.170.203.30", "qafmzsuxhq", "qafmzsuxhq", "qafmzsuxhq");
 	// insert a quote if submit button is clicked
 	if (isset($_POST['submit'])) {
 		if (empty($_POST['note'])) {
