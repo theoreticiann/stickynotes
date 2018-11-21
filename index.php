@@ -12,7 +12,7 @@
   	header("location: login.php");
   }
 	// connect to database
-	$db = mysqli_connect("107.170.203.30", "qafmzsuxhq", "SamaJZe6Nf", "qafmzsuxhq");
+	$db = mysqli_connect("localhost", "", "", "");
 	// insert a quote if submit button is clicked
 	if (isset($_POST['submit'])) {
 		if (empty($_POST['note'])) {
@@ -59,16 +59,14 @@
 	$currentTime = time();
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8"/>
 	<title>Sticky Notes</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	
 	<div class="header">
 	<h2 style="font-style: 'Hervetica';">Sticky Notes</h2>
 	<div align="left">
@@ -80,9 +78,10 @@
                 class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
         </div>
   	<div>
-		<p align="right"> <a href="index.php?logout='1'" style="color: white;">logout</a> </p>
+		<p align="right"> <a href="index.php?logout='1'" style="color: white;" onclick="signOut()">logout</a> </p>
 	</div>
 	</div>
+
 	
 	<br />
 	<?php  if (isset($_SESSION['username'])) : ?>
@@ -112,7 +111,6 @@
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Note</button>
 
 		<br />
-
 
 		<?php if (isset($errors)) { ?>
 		<p><?php echo $errors; ?></p>
