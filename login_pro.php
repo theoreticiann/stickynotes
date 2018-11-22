@@ -9,11 +9,11 @@
 	$_SESSION["email"] = $_POST["email"];
 
 
-	$mysqli = new mysqli("107.170.203.30", "qafmzsuxhq", "qafmzsuxhq", "qafmzsuxhq");
+    $db = mysqli_connect("107.170.203.30", "qafmzsuxhq", "qafmzsuxhq", "qafmzsuxhq");
 
 
 	$sql = "SELECT * FROM users WHERE email='".$_POST["email"]."'";
-	$result = $mysqli->query($sql);
+	$result = $db->query($sql);
 
 
 	if(!empty($result->fetch_assoc())){
@@ -23,7 +23,7 @@
 	}
 
 
-	$mysqli->query($sql2);
+	$db->query($sql2);
 
 
 	echo "Updated Successful";
