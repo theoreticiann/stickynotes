@@ -12,7 +12,7 @@
   	header("location: login.php");
   }
 	// connect to database
-	$db = mysqli_connect("107.170.203.30", "qafmzsuxhq", "qafmzsuxhq", "qafmzsuxhq");
+	$db = mysqli_connect("localhost", "", "", "");
 	// insert a quote if submit button is clicked
 	if (isset($_POST['submit'])) {
 		if (empty($_POST['note'])) {
@@ -65,6 +65,11 @@
 	<meta charset="utf-8"/>
 	<title>Sticky Notes</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="twitter:card" content="summary" />  
+    <meta name="twitter:title" content="Sticky Notes — The Best To Do List App & Task Manager" />  
+    <meta name="twitter:description" content="Millions of users have completed over 1 billion tasks." />  
+    <meta name="twitter:site" content="@oliviaysabell" />  
+    <meta name="twitter:image" content="src/stickyog.jpg" />
 </head>
 <body>
 	<div class="header">
@@ -138,6 +143,34 @@
 			</tr>
 		<?php  } ?>	
 	</tbody>
+<br />
+
+	<div>  
+        <a class="twitter-share-button"  
+           href="https://twitter.com/intent/tweet?via=stickynotes">  
+            Tweet  
+        </a>  
+    </div>
+	<script>  
+        //Twitter widget script to render tweet button
+        window.twttr = (function (d, s, id) {  
+            var js, fjs = d.getElementsByTagName(s)[0],  
+              t = window.twttr || {};  
+            if (d.getElementById(id)) return t;  
+            js = d.createElement(s);  
+            js.id = id;  
+            js.src = "https://platform.twitter.com/widgets.js";  
+            fjs.parentNode.insertBefore(js, fjs);  
+  
+            t._e = [];  
+            t.ready = function (f) {  
+                t._e.push(f);  
+            };  
+  
+            return t;  
+        }(document, "script", "twitter-wjs"));</script>
+
+	
 </form>
 </table>
 	
