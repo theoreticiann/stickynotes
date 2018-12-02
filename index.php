@@ -13,6 +13,7 @@
   }
 	// connect to database
 	$db = mysqli_connect("107.170.203.30", "qafmzsuxhq", "SamaJZe6Nf", "qafmzsuxhq");
+
 	// insert a quote if submit button is clicked
 	if (isset($_POST['submit'])) {
 		if (empty($_POST['note'])) {
@@ -62,14 +63,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"/>
 	<title>Sticky Notes</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8"/>
 	<meta name="twitter:card" content="summary" />  
-    <meta name="twitter:title" content="Sticky Notes — The Best To Do List App & Task Manager" />  
-    <meta name="twitter:description" content="Millions of users have completed over 1 billion tasks." />  
-    <meta name="twitter:site" content="@oliviaysabell" />  
-    <meta name="twitter:image" content="src/stickyog.jpg" />
+	<meta name="twitter:site" content="@Oliviaysabell" />  
+	<meta name="twitter:title" content="Sticky Notes — The Best To Do List App & Task Manager" />  
+	<meta name="twitter:description" content="Millions of users have completed over 1 billion tasks." />  
+	<meta name="twitter:image:alt" content="Summary Card" />  
+    <meta name="twitter:image" content="http://altconvert.com/src/stickysmall.jpg" />
 </head>
 <body>
 	<div class="header">
@@ -147,7 +149,7 @@
 
 	<div>  
         <a class="twitter-share-button"  
-           href="https://twitter.com/intent/tweet?via=stickynotes">  
+           href="https://twitter.com/intent/tweet?via=Oliviaysabell">  
             Tweet  
         </a>  
     </div>
